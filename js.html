@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <br><br>
+
+    <button type="button" name="button" onclick="singleclick()">OneClick</button>
+    <button type="button" name="button" ondblclick="doubleclick()">DoubleClick</button>
+    <button type="button" name="button" onmouseover="doubleclick()">OnMouseOver</button>
+    <button type="button" name="button" onkeyup="doubleclick()">OnKeyUp</button>
+    <button type="button" name="button" onkeydown="doubleclick()">OnKeyDown</button>
+    <input type="text" name="" value="" onfocus="singleclick()">
+    <input type="text" name="" value="" onblur="singleclick()"><br>
+    <button type="button" name="button" onclick="question()">Prompt</button>
+    <button type="button" name="button" onclick="print()">Print</button>
+    <button type="button" name="button" onclick="open()">Open</button>
+    <button type="button" name="button" onclick="pop()">Open</button>
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="content">Lol Lol</p>
+    <button type="button" name="button" onclick="paragraph()">lol</button>
+
+
+
+
+    <div id="lol">
+      <h1 class="wow"></h1>
+      <p class="wow"></p>
+      <h2 id="ww"></h2>
+    </div>
+
+
+    <script type="text/javascript">
+
+    //Output
+      //document.write('<h2>Hello</h2>');
+      //window.alert('hi');
+      //console.log('yoo!');
+
+      //+ - * %
+      //variable
+      //var a = 10;
+      //var b = 12;
+      //document.write(a+b);
+
+      //function
+      //function something(){
+        //document.write('WoW');
+      //}
+      //something();
+
+      function anything($a,$b){
+        var sum = $a + $b;
+        document.write('<br>'+sum);
+      }
+      anything(10,12);
+
+      //Array
+      var array1 = [3,4,1,2];
+      var array2 = ['ami', 'tumi', 'lol'];
+      document.write("<br>");
+      document.write(array1[2]);
+      document.write("<br>");
+      document.write(array2[2]+array1[2]);
+
+      array3 = array1.concat(array2);
+      array3.sort();
+      document.write("<br>");
+      document.write("Hello: "+array3);
+
+      //Array Length
+      document.write("<br>");
+      document.write("Length : "+array1.length);
+
+      //1st number remove
+      var array1 = [1,2,3,4];
+      array1.shift();
+      document.write("<br>");
+      document.write(array1);
+
+      //any number add in add 1st position
+      var array1 = [1,2,3,4];
+      array1.unshift(10);
+      document.write("<br>");
+      document.write(array1);
+
+      //last number remove
+      var array1 = [1,2,3,4];
+      array1.pop();
+      document.write("<br>");
+      document.write(array1);
+
+      //any number add in last position
+      var array1 = [1,2,3,4];
+      array1.push(10);
+      document.write("<br>");
+      document.write(array1);
+
+      //Data Type
+      var x = 100;
+      var y = 10.0;
+      var w = 10.28000000000000000000000000;
+      var v = ['a', 'b', 'c'];
+      var u = ["a", "b", "c"];
+      var t = "abc";
+      var s = 'abc';
+      var r = null;
+      var q = "";
+      document.write("<br>");
+      document.write(typeof(x)+"<br>");
+      document.write(typeof(y)+"<br>");
+      document.write(typeof(w)+"<br>");
+      document.write(typeof(v)+"<br>");
+      document.write(typeof(u)+"<br>");
+      document.write(typeof(t)+"<br>");
+      document.write(typeof(s)+"<br>");
+      document.write(typeof(array1)+"<br>");
+      document.write(typeof(array2)+"<br>");
+      document.write(typeof(array3)+"<br>");
+      document.write(typeof(r)+"<br>");
+      document.write(typeof(q)+"<br>");
+
+      var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+      document.write(typeof(person)+"<br>");
+
+      //Operator
+      var l = 5;
+      l += 5;    // += -= /= *= %=
+      document.write(l+"<br>"); //10
+      document.write(l+=5); //15
+
+      var firstName = "Arnab";
+      var lastName = "Das";
+      document.write("<br>"+firstName+" "+lastName+"<br>");
+      document.write(firstName+' '+lastName+'<br>');
+
+
+      //Loop
+      var array = ['Arnab', 'Das', 'Anik'];
+      for (var i = 0; i < array.length; i++) {
+        document.write(array[i]+" ");
+      }
+      document.write("<br>");
+
+      for (var i = 0; i <= 10; i++) {
+        document.write('2 * '+i+' = '+2*i);
+        document.write("<br>");
+      }
+      document.write("<br>");
+
+      var lol = 0;
+      while (lol<7) {
+        document.write(lol);
+        lol++;
+      }
+      document.write("<br>");
+
+
+      var wow = 12;
+      do {
+        document.write(wow+'\n');
+        wow++;
+      } while (wow<14)
+
+
+      //Button
+      function singleclick(){
+        console.log("hi");
+        document.write("hello");
+      }
+
+      function doubleclick(){
+        document.write('Yoo!');
+      }
+
+
+      //Object Method
+      var person = {
+        name : "Ada",
+        age : 25,
+        about:function(){
+          return this.name +" "+ this.age;
+        }
+      }
+      document.write('<br>');
+      document.write(person.name);
+      document.write('<br>');
+      document.write(person.age);
+      document.write('<br>');
+      document.write(person.about());
+
+      //alert
+      //alert("Hello!");
+      // var x = 5;
+      // var y = 10;
+      // if (x<y) {
+      //   alert("y less then x");
+      // }else {
+      //   alert("y is greater then x");
+      // }
+
+      //redirect
+      //window.location = "http://arnab.tk";
+      // function redirect(){
+      //   window.location = "http://arnab.tk";
+      // }
+      // setTimeout('redirect()', 1000);
+
+
+      //Confirm
+      // var answer = confirm("are you sure...???");
+      // if(answer){
+      //   alert("lol");
+      // }else {
+      //   alert("wow");
+      // }
+
+
+      //prompt
+      function question(){
+        var name = prompt("what's your name...???");
+
+        if(name){
+          document.write("name :" + name);
+        }
+      }
+
+      // new window Link open
+      function open(){
+        window.open('https://www.google.com/');
+      }
+
+      function pop(){
+        window.open('https://www.google.com/', 'testWindow', 'height=100, width=400, left=200, top=100, scrollbars=1');
+      }
+
+      function myFunction() {
+        window.open("https://www.w3schools.com");
+      }
+
+
+      //getElementById
+      // function paragraph(){
+      //   var name = document.getElementById('content');
+      //   alert(name.innerHTML);
+      // }
+
+      //getElementsByTagName
+      // var tagname = document.getElementsByTagName('*');
+      // console.log(tagname);
+
+      // var tagname = document.getElementsByTagName("p");
+      // console.log(tagname);
+       // var tagname = document.body.getElementsByTagName('*');
+       // console.log(tagname);
+
+       //div id= lol
+       // var tagname = document.getElementById('lol').getElementsByTagName('*');
+       // console.log(tagname);
+
+       //how to number of h1 tag
+       // var tagname = document.getElementsByTagName('h1').length;
+       // console.log(tagname);
+
+       //find how to this class using
+       // var tagclass = document.getElementsByClassName('wow');
+       // console.log(tagclass);
+
+
+       //querySelector class=wow
+       // var query = document.querySelector('.wow');
+       // console.log(query);
+
+       //show all
+       // var query = document.querySelectorAll('.wow');
+       // console.log(query);
+       //id=ww
+       // var query = document.querySelectorAll('#ww');
+       // console.log(query);
+
+       // var query = document.querySelectorAll('.wow').length;
+       // console.log(query);
+       // var query = document.querySelectorAll('#ww').length;
+       // console.log(query);
+
+
+
+
+
+
+
+
+
+
+
+      document.write('<br>');
+
+    </script>
+    <div id="lol">
+      <h1></h1>
+      <p></p>
+    </div>
+
+  </body>
+</html>
