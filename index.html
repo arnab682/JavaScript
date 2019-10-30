@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	
+	<h4>OnClick Button :</h4>
+	<button onclick="ageFun()">One Click</button>
+	<button ondblclick="ageFun()">Double Click</button>
+	<button onmouseover="ageFun()">OnMouseOver </button>
+	<button onkeydown="ageFun()">OnKeyDown </button>
+	<button onkeyup="ageFun()">OnKeyUp </button>
+	<input type="text" onfocus="ageFun()" name="" placeholder="onfocus">
+	<input type="text" onblur="ageFun()" name="" placeholder="onblur">
+	<button onclick="fromoter()">prompt</button>
+	<button onclick="window.print()">print</button>
+	<button onclick="newWin()">New Window</button>
+	<button onclick="winDetail()">winDetail</button><br>
+
+
+	<h4 id="channel">Name : Arnab</h4>
+	<button onclick="content()">getElementById</button>
+
+	
+
+	<br>
+	<script type="text/javascript">
+		//three type of print in JS
+		// document.write('hi');
+		// document.write('<h4>hi</h4>');
+		// window.alert('Hello');
+		// console.log('hi');
+
+		//variable
+		var a = 'Arnab';
+		document.write(a);
+		document.write(' ');
+		var b = "Das";
+		document.write(b);
+
+		//Additional
+		var p = 4;
+		var q = 3;
+		var sum = p + q;
+		document.write(' '+sum);//space+sum
+
+		function something(){
+			document.write(' Day');
+		}
+		something();
+
+		//subtraction with function
+		function subtraction($a, $b){
+			
+			var sub = $a - $b;
+			document.write(" "+sub);
+		}
+		subtraction(10,7);
+
+		//array
+		var w = [1,2,3,4,5];
+		var v = ['i', 'o', 't']
+		document.write(' Array: ');
+		//document.write(w[1]);
+		document.write(v[1]);
+
+		//array add
+		var w = [1,2,3,4,5];
+		var v = [6,7,8];
+		var add = w.concat(v);
+		document.write(' Array Add: ');
+		document.write(add+"<br>");
+
+		//serialised
+		var u = [7,2,9,4,8];
+		u.sort();
+		document.write(' Serialise : ');
+		document.write(u);
+		u.reverse()
+		document.write(' Reverse: '+u);
+
+		//Length
+		var o = [7,2,9,4,8];
+		document.write(' Length : ');
+		document.write(o.length);
+
+		//Shift
+		var o = [7,2,9,4,8];
+		o.shift();
+		document.write(' Shift : ');
+		document.write(o);
+		
+		//Unshift
+		var o = [7,2,9,4,8];
+		o.unshift(100);
+		document.write(' Unshift : ');
+		document.write(o);
+		
+		//Pop
+		var o = [7,2,9,4,8];
+		o.pop();
+		document.write(' Pop : ');
+		document.write(o);
+
+		//Push
+		var o = [7,2,9,4,8];
+		o.push(100);
+		document.write(' Push : ');
+		document.write(o+"<br>");
+
+		//Type
+		var s = 7;
+		document.write(typeof(s));
+		var y = 7.7;
+		document.write(' '+ typeof(y));
+		var i = 'Ur';
+		document.write(' '+ typeof(i));
+		var i = "me";
+		document.write(' '+ typeof(i));
+		var v = ['i', 'o', 't']
+		document.write(' '+ typeof(v));
+		document.write(' '+ typeof(v[2]));
+		var z = ["a", "n", "i", "k"];
+		document.write(' '+ typeof(z));
+		document.write(' '+ typeof(z[2])+"<br>");
+
+		//Operator Aritmatic, Assignment
+		var r = 5;
+		r += 2;
+		document.write(r);
+		var x = 7;
+		x %= 5;
+		document.write(' '+x);
+		var txt1 = "John";
+		var txt2 = "Doe";
+		var txt3 = txt1 + " " + txt2;
+		document.write(' '+txt3);
+		var x = 5 + 5;
+		var y = "5" + 5;
+		var z = " Hello" + 5;
+		document.write(z);
+
+		//loop
+		document.write("<br>"+"for loop :");
+		var o = [7,2,9,4,8];
+		for(i=0; i<o.length; i++){
+			document.write("<br>"+o[i]);
+		}
+
+		document.write("<br>"+"while loop :");
+		var i = 0;
+		while(i<o.length){
+			document.write("<br>"+o[i]);
+			i++;
+		}
+
+		document.write("<br>"+"do while loop :");
+		var i = 0;
+		do{
+			document.write("<br>"+o[i]);
+			i++;
+		}while(i<o.length)
+
+
+
+		//Statement
+		document.write("<br />");
+		var age = prompt("Please enter your age");
+		if(age>18)
+		document.write("You are an adult <br />");
+		if(age<18)
+		document.write("You are NOT an adult <br />");
+		else
+		document.write("lol adult <br />");
+
+
+		//Onclick Double onmouseover event
+		function ageFun(){
+			//console.log('18');
+			document.write('18');
+		}
+
+		//Object 
+		var person = {
+
+			firstname : "Arnab",
+			lastname : "Das",
+			age : "25",
+
+			info:function(){
+				return this.firstname + this.lastname + this.age;
+			}
+		}
+		document.write(person.firstname+" "+person.lastname+' '+person.age);
+		document.write("<br>"+person.info());
+
+		//alert
+		alert('lol');
+
+		//redirect
+		//window.location = "http://www.fb.com"
+		function redirect(){
+			window.location = "http://www.fb.com";
+		}
+		//setTimeout(redirect(),1000);
+
+
+		//confirm cancle
+		var answer = confirm("leave me?");
+		document.write("<br>");
+		if(answer){
+			document.write('OK');
+		} else {
+			document.write('NO');
+		}
+
+		//prompt
+		function fromoter(){
+			var answer = prompt("What is your name?");
+
+			document.write("<br>");
+			if(answer){
+				document.write("Name : "+answer);
+			} else {
+				document.write('NO');
+			}
+		}
+		//fromoter();
+		
+
+		//window print
+		//print();
+
+		//new window open
+		//open("http://arnab.me");
+		function newWin(){
+			window.open("http://www.google.com");
+		}
+		//newWin();
+
+
+		//window open details
+		function winDetail(){
+			window.open("http://www.google.com", 'testWindow', 'height=300, width=300, top=200, scrollbars=1');
+		}
+		//winDetail();
+
+
+		//getElementById
+		function content(){
+			var content = document.getElementById('channel');
+			alert(content.innerHTML);
+		}
+
+
+		//getElementById Sum
+		function numSum(){
+			var a = document.getElementById('num1');
+			var b = document.getElementById('num2');
+
+			var sum = a+b;
+			alert(sum.innerHTML);
+		}
+
+	</script>
+
+	<input type="text" id="num1" >
+	<input type="text" id="num2" >
+	<button onclick="numSum()">Sum</button>
+	
+
+</body>
+</html>
